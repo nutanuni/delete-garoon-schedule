@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "eslint:recommended" // 推奨設定を使用
+    ],
+    "plugins": [],
+    "parserOptions": {
+        "sourceType": "module" // esmodules対応
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "globals": {},
+    "rules": {}
+}
