@@ -1,9 +1,12 @@
+const ShebangPlugin = require('webpack-shebang-plugin');
+
 module.exports = {
   entry: './src/index.js',
   output: {
     path: `${__dirname}/dist`,
     filename: 'main.js'
   },
+  target: 'node',
   module: {
     rules: [
       {
@@ -24,5 +27,8 @@ module.exports = {
         exclude: /node_modules/,
       }
     ]
-  }
+  },
+  plugins: [
+    new ShebangPlugin()
+  ]
 };
