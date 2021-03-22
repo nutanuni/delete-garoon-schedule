@@ -2,4 +2,10 @@
 
 import parseCommandLine from './parseCommandLine';
 
-console.log(parseCommandLine());
+try {
+  // コマンドライン引数のパース
+  const argv = parseCommandLine();
+  console.log(argv);
+} catch (error) {
+  console.error(error);
+}
