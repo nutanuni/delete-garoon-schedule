@@ -1,4 +1,5 @@
 const ShebangPlugin = require('webpack-shebang-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,6 +8,7 @@ module.exports = {
     filename: 'main.js'
   },
   target: 'node',
+  externals: [nodeExternals()], // node_modules配下のライブラリはバンドルしないようにする設定
   module: {
     rules: [
       {
